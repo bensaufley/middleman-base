@@ -5,16 +5,13 @@ A basic resetting HTML5 template using SASS, Compass, and HAML. Rebuilt with ver
 ## Files
 
 ```
+.
 ├── Gemfile
 ├── Gemfile.lock
 ├── README.md
 ├── config.rb
 └── source
-    ├── docs
-    │   └── scla_vinyasa_vibes.pdf
     ├── images
-    │   ├── background.png
-    │   └── middleman.png
     ├── index.html.haml
     ├── javascripts
     │   └── all.coffee
@@ -25,3 +22,8 @@ A basic resetting HTML5 template using SASS, Compass, and HAML. Rebuilt with ver
         ├── _shared.sass
         └── all.sass
 ```
+- **Gemfile** - Google ["Ruby gem"](https://www.google.com/search?q=ruby+gems)
+- **Gemfile.lock** - output of `bundle install` from Gemfile.
+- **README.md** - this readme.
+- **config.rb** - Middleman configuration. Stuff here for how gems operate, how Middleman outputs. View the [Middleman site](http://middlemanapp.com/getting-started/#toc_5) for more information.
+- **source** - Source code. Middleman will automatically compile to /build.
