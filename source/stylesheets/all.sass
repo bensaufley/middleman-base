@@ -1,0 +1,62 @@
+@charset "utf-8"
+@import shared
+@import compass/reset
+
+*
+  @include box-sizing(border-box)
+
+html, body
+  width: 100%
+  min-height: 100%
+  font-size: 62.5%
+
+body
+  height: 100%
+  background-size: 100% auto
+  color: #444
+  font-size: 16px
+  font-size: 1.6rem
+  font-weight: 200
+  font-family: 'Avenir', 'Avenir Lt Std', 'Avenir LT W01 45 Book', sans-serif
+
+input, textarea, select
+  font: 300 1em 'Avenir', 'Avenir Lt Std', 'Avenir LT W01 45 Book', sans-serif
+
+h1, h3
+  text-transform: uppercase
+  font-weight: 800
+  font-family: 'Avenir LT W01 85 Heavy'
+  span
+    font-size: .8em
+h1
+  font-size: 24px
+  font-size: 2.4rem
+  line-height: 1.2em
+h2
+  font-size: 21px
+  font-size: 1.8rem
+  line-height: 1.25em
+h3
+  font-size: 18px
+  font-size: 1.8rem
+  line-height: 1.3em
+
+a:link, a:visited
+  color: $orange
+  text-decoration: none
+  &:hover
+    color: darken($orange,20%)
+    text-decoration: underline
+
+h1, h2, h3, p, ul, ol, li
+  margin-bottom: .5em
+
+ul
+  list-style: square
+  margin-left: 2em  
+
+main
+  display: block
+  position: relative
+
+@import forms
