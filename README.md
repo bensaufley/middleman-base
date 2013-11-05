@@ -50,3 +50,10 @@ A basic resetting HTML5 template using SASS, Compass, and HAML. Rebuilt with ver
     - **stylesheets** - Best idea is to `@import` all other stylesheet files into `all.sass`, and signify as such using the underscore (`_forms.sass`, etc). Using [SASS](http://sass-lang.com). I prefer the .sass format (over .scss), which does not include brackets. It's cleaner. It requires significant whitespace, which helps enforce neat code. Be careful of over-nesting (which will compile to long lines of selectors, and unneccesarily bloated files).
         - **_forms** - Basic form formatting.
         - **_shared** - A few basic colors (`$orange`,`$brown`,`$lightbeige`, etc) and reusable custom mixins.
+            - *mixins*:
+                - `opacity`: tweaking the opacity mixin for use in IE. Value should be between 0 and 1, 1 being fully opaque.
+                - `ie-opacity-fix`: I honestly don't know. This is for old IE, and I think deals with the way PNGs render.
+                - `retina-bg`: Input a filename, and it'll output background-image and then a media query for retina background image (found in `images/2x`)
+                - `transparentbg`: Takes an RGBA value and makes a simple RGBA background, but also makes a transparent background IE8 will use.
+                - `text-hide`: Takes no values. A basic accessibility technique. If you're using a block for graphic text (a logo, a graphic banner…), you can set the background of that block, and fill in the text in the HTML, then add this - the text disappears (but is still visible to screen readers) and leaves the background image.
+                
