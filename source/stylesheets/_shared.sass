@@ -35,9 +35,9 @@ $experimental-support-for-svg: true
     height: 0
 
 @mixin retina-bg($filename)
-  background-image: url($filename)
+  background-image: image-url($filename)
   @media screen and (min-device-pixel-ratio:1.5),screen and (-webkit-min-device-pixel-ratio:1.5)
-    background-image: url('2x/' + $filename)
+    background-image: image-url('2x/' + $filename)
 
 @mixin transparentbg($rgba)
   background: $rgba

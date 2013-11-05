@@ -62,17 +62,32 @@ ul
   display: block
   background-position: center
   background-size: contain
+  background-repeat: no-repeat
+  margin: 0 auto
   @include text-hide
   &.scla
     @include retina-bg('scla.png')
+    &.ko
+      @include retina-bg('scla-ko.png')
   &.rscny
     @include retina-bg('rscny.png')
+    &.ko
+      @include retina-bg('rscny-ko.png')
   &.both
+    max-width: 278px
     @include retina-bg('both.png')
+    &.ko
+      @include retina-bg('both-ko.png')
     
-
-main
+header, main, footer,
   display: block
   position: relative
+
+header, footer
+  text-align: center
+
+main
+  margin: 0 auto
+  max-width: 960px
 
 @import forms

@@ -1,20 +1,25 @@
 !!!
-%html
+%html.no-js
   %head
     %meta{charset: "utf-8"}/
     / Always force latest IE rendering engine or request Chrome Frame
     =surround "<!--[if IE]>", "<![endif]-->" do
       %meta{content: "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
-    %meta{name: "viewport", content: "initial-scale:1, maximum-scale: 1"}
-    %title= content_for?(:title) ? yield(:title) : ""
+    %meta{name: "viewport", content: "initial-scale=1,maximum-scale=1"}
+    %title= @title ? @title : (@brand && @brand!="both" ? (@brand=="rscny" ? "Reebok Sports Club/NY" : "Sports Club/LA") : "Sports Club/LA &amp; Reebok Sports Club/NY")
     = stylesheet_link_tag "http://fast.fonts.com/cssapi/170245fd-2f10-4ec5-8f88-02c9c9b503b8.css", media: "all"
     = stylesheet_link_tag "all"
-    = javascript_include_tag  "all"
+    = javascript_include_tag "modernizr"
   %body{class: page_classes}
     %header
+      =content_tag(:a,'',href: (@brand=="rscny" ? "http://reeboksportsclubny.com" : "http://sportsclubla.com"), class: "logo #{@brand}") if @brand
+      =content_tag(:h1,@title) if @title
+      =content_tag(:h2,@subhead) if @subhead
     %main
       = yield
     %footer
-      =content_tag(:p,content_for(:footer)) if content_for?(:footer)
+      =content_tag(:p,@footer) if @footer
       %p
         Copyright ©#{Date.today.year}, Millennium Partners Sports Club Management, LLC. All Rights Reserved
+    = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
+    = javascript_include_tag  "all"
