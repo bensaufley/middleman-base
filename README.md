@@ -49,4 +49,4 @@ A basic resetting HTML5 template using SASS, Compass, and HAML. Rebuilt with ver
     - **layouts** - Can mostly just stick to/tweak `layout.haml`, which will wrap the content from all HTML, HAML, etc in the `/source` root with a standard header, footer, CSS and Javascript tags, meta tags, jQuery, etc.
     - **stylesheets** - Best idea is to `@import` all other stylesheet files into `all.sass`, and signify as such using the underscore (`_forms.sass`, etc). Using [SASS](http://sass-lang.com). I prefer the .sass format (over .scss), which does not include brackets. It's cleaner. It requires significant whitespace, which helps enforce neat code. Be careful of over-nesting (which will compile to long lines of selectors, and unneccesarily bloated files).
         - **_forms** - Basic form formatting.
-        - **_shared** - A few basic colors (`$orange`,`$brown`,`$lightbeige`)
+        - **_shared** - A few basic colors (`$orange`,`$brown`,`$lightbeige`, etc) and reusable custom mixins.
