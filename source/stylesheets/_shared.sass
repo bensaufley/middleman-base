@@ -19,9 +19,10 @@ $experimental-support-for-svg: true
 
 @mixin opacity($opacity, $fix: true)
   opacity: $opacity
-  filter: alpha(opacity=round($opacity*100))
   @if $fix
     @include ie-opacity-fix($opacity)
+  @else
+    filter: alpha(opacity=round($opacity*100))
 
 @mixin clearfix
   zoom: 1
