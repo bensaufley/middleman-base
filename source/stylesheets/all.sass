@@ -53,7 +53,21 @@ h1, h2, h3, p, ul, ol, li
 
 ul
   list-style: square
-  margin-left: 2em  
+  margin-left: 2em
+
+.logo
+  max-width: 140px
+  height: 78px
+  width: 100%
+  display: block
+  @include text-hide
+  &.scla
+    @include retina-bg('scla.png')
+  &.rscny
+    @include retina-bg('rscny.png')
+  &.both
+    @include retina-bg('both.png')
+    
 
 main
   display: block

@@ -34,6 +34,11 @@ $experimental-support-for-svg: true
     width: 0
     height: 0
 
+@mixin retina-bg($filename)
+  background-image: url($filename)
+  @media screen and (min-device-pixel-ratio:1.5),screen and (-webkit-min-device-pixel-ratio:1.5)
+    background-image: url('2x/' + $filename)
+
 @mixin transparentbg($rgba)
   background: $rgba
   filter: progid:DXImageTransform.Microsoft.gradient(StartColorStr='#{ie-hex-str($rgba)}',EndColorStr='#{ie-hex-str($rgba)}')
