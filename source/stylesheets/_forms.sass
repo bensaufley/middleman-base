@@ -5,6 +5,8 @@ input, select, textarea
 form
   *
     @include box-sizing(border-box)
+  input[type="button"], input[type="submit"]
+    @include appearance(normal)
   label
     display: block
     width: 100%
@@ -29,8 +31,6 @@ form
         width: 20%
         &:last-child
           width: 30%
-    input[type="button"], input[type="submit"]
-      @include appearance(normal)
     strong
       border: 1px solid transparent
       width: 30%
